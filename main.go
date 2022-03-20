@@ -7,8 +7,8 @@ import (
 
 func main() {
 	// nilai := ValueBesar([]int{1,2,3,8,9,3,2,1})
-	nilai := ValueBesar([]int{1,2,3,8,9,2,1})
-	// nilai := ValueBesar([]int{1,2})
+	// nilai := ValueBesar([]int{1,2,3,8,9,2,1})
+	nilai := ValueBesar([]int{1,2})
 	// nilai := ValueBesar([]int{1,2,1,2,2,1})
 	fmt.Println("nilai terbesar: ", nilai)
 }
@@ -19,7 +19,7 @@ func ValueBesar(nilai []int) string {
 	ascending = append(ascending, nilai[0])
 	terakhirasc := ascending[len(ascending)-1]
 
-	if len(nilai) < 2{
+	if len(nilai) < 2 || nilai[0] != nilai[1]{
 		return "invalid"
 	}
 	
